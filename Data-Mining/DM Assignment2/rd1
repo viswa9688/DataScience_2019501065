@@ -1,0 +1,69 @@
+
+R version 4.0.2 (2020-06-22) -- "Taking Off Again"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> setwd("C:\\Users\\HARIKA\\Desktop\\DataScience_2019501065\\Data-Mining\\DM Assignment2")
+>  ca_data<-read.csv("CA_house_prices.csv",header=FALSE)
+> oh_data<-read.csv("OH_house_prices.csv",header=FALSE)
+> boxplot(ca_data[,1],oh_data[,1],col="blue",main="House Boxplot",names=c("CA houses", "Ohio houses"),ylab="Prices(in thousands)")
+> hist(ca_data[,1]*1000,breaks=seq(0,3500000,by=500000),col="red",xlab="Prices",ylab="Frequency",main="Haarika")
+>  plot(ecdf(ca_data[,1]),verticals= TRUE,do.p = FALSE,main ="ECDF for House Prices (Haarika)",xlab="Prices(in thousands)",ylab="Frequency")
+>  
+>  
+>  
+>  lines(ecdf(oh_data[,1]),verticals= TRUE,do.p = FALSE,col.h="red",col.v="red",lwd=4)
+>  legend(2100,.6,c("CA Houses","OH Houses"), col=c("black","red"),lwd=c(1,4))>hist(ca_data[,1]*1000,breaks=seq(0,3500000,by=500000),col="red",xlab="Prices",ylab="Frequency",main="Rhoda Aronce's CA House Plot")
+Error in legend(2100, 0.6, c("CA Houses", "OH Houses"), col = c("black",  : 
+  comparison of these types is not implemented
+>  legend(2100,.6,c("CA Houses","OH Houses"), col=c("black","red"),lwd=c(1,4))>hist(ca_data[,1]*1000,breaks=seq(0,3500000,by=500000),col="red",xlab="Prices",ylab="Frequency",main="Rhoda Aronce's CA House Plot")
+Error in legend(2100, 0.6, c("CA Houses", "OH Houses"), col = c("black",  : 
+  comparison of these types is not implemented
+>  legend(2100,.6,c("CA Houses","OH Houses"), col=c("black","red"),lwd=c(1,4))
+>  plot(ecdf(ca_data[,1]),verticals= TRUE,do.p = FALSE,main ="ECDF for House Prices (Haaarika)",xlab="Prices(in thousands)",ylab="Frequency")
+>  lines(ecdf(oh_data[,1]),verticals= TRUE,do.p = FALSE,col.h="red",col.v="red",lwd=4)
+> legend(2100,.6,c("CA Houses","OH Houses"), col=c("black","red"),lwd=c(1,4))
+> 
+> 
+> football<-read.csv("football.csv", header=TRUE)
+>  plot(football[,2],football[,3],xlim=c(0,12),ylim=c(0,12),pch=15,col="blue",xlab="2003 Wins",ylab="2004 Wins",main="Football Wins (Haarika)")
+> abline(c(0,1))
+>  cor(football[,2],football[,3])
+[1] 0.6537691
+>  cor(football[,2],football[,3]+10)
+[1] 0.6537691
+>  cor(football[,2],football[,3]*2)
+[1] 0.6537691
+> cor(football[,2],football[,3]*-2)
+[1] -0.6537691
+> median(oh_data[,1])
+[1] 118
+> mean(oh_data[,1])
+[1] 190.3176
+> median(oh_data[,1]+10)
+[1] 128
+>  median(oh_data[,1]*2)
+[1] 236
+> ages<-c(19,23,30,30,45,25,24,20
++ )
+> sd(ages)
+[1] 8.315218
+>  sd(ages+10)
+[1] 8.315218
+> sd(ages*10)
+[1] 83.15218
+> 
